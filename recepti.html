@@ -10,17 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="recepti.css">
+    <link rel="stylesheet" href="header_styles.css">
+    <script src=""></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
 </head>
 <body>
-    <header>
-
-
-    </header>  
+        <div class="main-wrapper main-flex">
+            <header>
+            <nav class="nav-flex">
+                <a href="recepti.html" class="homepage_logo">Recepti</a>
+                <div class="search-flex">
+                    <input type="text" placeholder="Pretraži recepte" class="search_input" id="searchBar">
+                    <a href="login.html"><span class="material-symbols-outlined login" title="Prijavi se" id="login">
+                        person
+                        </span></a>
+                    <a href="recepti.html"><span class="material-symbols-outlined logout" title="Odjava" id="logout">
+                        logout
+                            </span></a>
+                </div>
+            </nav>
+    </header>
+    </div>
 <main>
 <div class="wrapping">
     <div class="recipes"> <!-- Grid -->
-        <div class="recipe">
+
+        <div class="recipe" data-recipe-name="Piletina u umaku od rajčice s tjesteninom">
             <img src="https://img.freepik.com/free-photo/authentic-italian-pasta_24972-2332.jpg?w=1380&t=st=1707904765~exp=1707905365~hmac=b9f304d5ca34a6eeb9477fe0f7ca7c2e6c81e27685878a7ed7880538a0f04f6e" 
             alt="tjestenina">
             <h2 class="headingStyle">Piletina u umaku od rajčice s tjesteninom</h2>
@@ -34,7 +55,7 @@
         </div>
     </div>
 
-    <div class="recipe">
+    <div class="recipe" data-recipe-name="Pizza">
         <img src="https://img.freepik.com/free-photo/freshly-baked-pizza-rustic-wooden-table-generated-by-ai_24640-81646.jpg?size=626&ext=jpg&ga=GA1.1.827262009.1707902340&semt=sph" 
         alt="pizza">
         <h2 class="headingStyle">Pizza</h2>
@@ -48,10 +69,10 @@
         </div>
     </div>
 
-    <div class="recipe">
+    <div class="recipe" data-recipe-name="Tortilja">
         <img src="https://img.freepik.com/free-photo/fresh-sandwich-cutting-board-with-healthy-tomatoes-generative-ai_188544-8108.jpg?size=626&ext=jpg&ga=GA1.1.827262009.1707902340&semt=sph" 
         alt="tortilja">
-        <h2 class="headingStyle">Tortilja</h2>
+        <h2 class="headingStyle" data-recipe-name="Tortilja">Tortilja</h2>
         <p class="overflow_ellipsis">Izvorno su se pripremale od kukuruznog brašna, takve tortilje jele su se
            tisućama godina na sjeveru, sjeverozapadu i sjeveroistoku Meksika,
            gdje su bile glavna hrana.</p>
@@ -61,7 +82,7 @@
         </div>
     </div>
 
-    <div class="recipe">
+    <div class="recipe" data-recipe-name="Burger">
         <img src="https://img.freepik.com/free-photo/grilled-cheeseburger-with-tomato-onion-fries-generated-by-ai_188544-43039.jpg?size=626&ext=jpg&ga=GA1.1.827262009.1707902340&semt=sph" 
         alt="burger">
         <h2 class="headingStyle">Burger</h2>
@@ -73,7 +94,7 @@
         </div>
     </div>
 
-    <div class="recipe">
+    <div class="recipe" data-recipe-name="Sushi">
         <img src="https://img.freepik.com/free-photo/painting-sushi-plate-with-picture-fish-it_188544-12221.jpg?size=626&ext=jpg&ga=GA1.1.827262009.1707902340&semt=sph" 
         alt="sushi">
         <h2 class="headingStyle">Sushi</h2>
@@ -86,6 +107,7 @@
             <button>sushi</button>
         </div>
     </div>
+
     </div>
 </div>
 </main>
@@ -97,6 +119,8 @@
         </h3>
 </footer>
 <!--Initialize App-->
-<script src="./src/index.js"></script>
+<script type="module" src="./src/index.js"></script>
+<script src="./src/app.js"></script>
+<script src="./src/search.js"></script>
 </body>
 </html>

@@ -8,13 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./auth_Styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
     <title>Recepti | Prijava</title>
 </head>
 <body>
 <div class="main-wrapper">
     <header>
     <nav class="nav-flex">
-        <a href="index.html" class="homepage-logo">Recepti</a>
+        <a href="recepti.html" class="homepage-logo">Recepti</a>
     </nav>
     </header>   
     <main class="main-flex">           
@@ -30,8 +33,10 @@
         <div class="footer-flex">           
             <span class="material-symbols-outlined">copyright</span>
             <a href="https://kodiraonica.dev/" class="link-footer" target="_blank">Kodiraonica</a>
-         </div>          
+         </div>        
     </footer>
 </div>
+<script type="module" src="./src/index.js"></script>   
+<script type="module" src="./src/login.js"></script>
 </body>
 </html>
